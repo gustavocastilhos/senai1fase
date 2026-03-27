@@ -2,12 +2,17 @@ programa {
   funcao inicio() {
     escreva("ola mundo\n")
         escreva("sejam bem vindos\n")
-        inteiro numero
+         cadeia nome
 		
-		escreva("Digite um número inteiro: ")
-		leia(numero)
+		escreva("Digite seu nome: ")
+		leia(nome)
 		
-		escreva("O número digitado foi: ", numero, "\n")
+	
+    escreva("digite sua idade: ")
+    inteiro idade
+    leia(idade)
+    escreva("Seu nome é: ", nome, "\n")
+    escreva("A idade é: ", idade,"\n" )
 
   }
 }
