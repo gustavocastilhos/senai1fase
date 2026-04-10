@@ -1,13 +1,13 @@
 programa {
   funcao inicio() {
-    real a, b, c, soma, sub, mult, div, frete
+    real peso, distancia, volume, soma, sub, mult, div, frete
     	escreva("Digite o peso: ")
-		leia(a)
+		leia(peso)
 		escreva("Digite a distancia: ")
-		leia(b)
+		leia(distancia)
     escreva("digite o volume: ")
-    leia(c)
-    frete = 15 + (2*a+0.05*b+10*c)
+    leia(volume)
+    frete = 15 + (2*peso+0.05*distancia+10*volume)
     escreva(frete)
     //soma = a + b 
 		//sub  = a - b
