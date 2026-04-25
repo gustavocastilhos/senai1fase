@@ -1,4 +1,3 @@
-// Programa equivalente em JavaScript
 
 function inicio() {
     let quantidadeInicialDeLaranjas = 87;
@@ -7,5 +6,4 @@ function inicio() {
     alert("A quantidade de vendas diaras são de: " + quantidadeDeVendasDiarias);
 }
 
-// Chamando a função principal
 inicio();
