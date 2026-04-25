@@ -17,14 +17,14 @@ programa {
 
     }
     senao{
-        escreva("Seu cachorro não pode se aposentar :( ")
+        escreva("Seu cachorro não pode se aposentar ")
         }
     }
     senao{
          se(idadeDoCachorroEmAnosHumanos > 65)
         escreva("Seu cachorro pode se aposentar")
         senao{
-          escreva("Seu cachorro não pode se aposentar :( ")
+          escreva("Seu cachorro não pode se aposentar ")
         }
         }
        
