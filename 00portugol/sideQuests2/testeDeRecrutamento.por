@@ -11,7 +11,7 @@ programa {
   leia(temRecomendacao)
    se(idade > 16 e sabeNadar == "sim"){
     escreva("Aprovado para o navio!")
-    }senao se(sabeNadar == "nao" ou sabeNadar == "sim"  e  temRecomendacao == "sim" e "Sim" e idade >= 14){
+    }senao se(sabeNadar == "nao" ou sabeNadar == "sim"  e  temRecomendacao == "sim" e idade >= 14){
     escreva("Aprovado sob recomendação. Monitorar nas primeiras viagens")
     }senao{
     escreva("Reprovado. Volte quando estiver mais preparado para o mar.")
