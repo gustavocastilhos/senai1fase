@@ -14,28 +14,26 @@ function callMainFor(src) {
     'sideQuests1/decisaoDeCompra.js': 'executarDecisaoDeCompra',
     'sideQuests1/idadeDoCachorro.js': 'executarIdadeDoCachorro',
     'sideQuests1/verificandoVotacao.js': 'executarVerificacaoVotacao',
-    // also allow calling by base filename
-    'calculadoraDeImc': 'calcularIndiceMassaCorporal',
+// também permite chamar pelo nome base do arquivo  
     'conversorDeTemperatura': 'executarConversor',
     'decisaoDeCompra': 'executarDecisaoDeCompra',
     'idadeDoCachorro': 'executarIdadeDoCachorro',
     'verificandoVotacao': 'executarVerificacaoVotacao'
   };
 
-  // try full normalized path first
+  // Tente primeiro o caminho normalizado completo
   if (map[normalized] && typeof window[map[normalized]] === 'function') {
     window[map[normalized]]();
     return true;
   }
 
-  // try base name
-  const base = normalized.split('/').pop().replace(/\.js$/, '');
+// tente o nome base 
   if (map[base] && typeof window[map[base]] === 'function') {
     window[map[base]]();
     return true;
   }
 
-  // fallback: try to call a function that matches the base filename
+// Em caso de falha: tente chamar uma função que corresponda ao nome do arquivo base
   if (typeof window[base] === 'function') {
     window[base]();
     return true;
@@ -68,5 +66,3 @@ document.getElementById('sidequests-list').addEventListener('click', function (e
   scriptElement.onload = function () { callMainFor(src); };
   document.body.appendChild(scriptElement);
 });
-
-// Nota: este arquivo depende do HTML conter o elemento #sidequests-list com botões
