@@ -16,7 +16,13 @@ document.getElementById('sidequests-list').addEventListener('click', function (e
   scriptElement.setAttribute('data-loaded', src);
   scriptElement.onload = function () {
     // chamar a função principal após carregar cada script
-    switch (src) {
+    // Normaliza o caminho para suportar data-src com ou sem prefixos (ex: "01javascript/")
+    let normalized = src;
+    const marker = 'sideQuests1/';
+    const idx = src.indexOf(marker);
+    if (idx !== -1) normalized = src.slice(idx);
+
+    switch (normalized) {
       case 'sideQuests1/calculadoraDeImc.js':
         if (typeof calcularIndiceMassaCorporal === 'function') calcularIndiceMassaCorporal();
         break;
@@ -31,6 +37,24 @@ document.getElementById('sidequests-list').addEventListener('click', function (e
         break;
       case 'sideQuests1/verificandoVotacao.js':
         if (typeof executarVerificacaoVotacao === 'function') executarVerificacaoVotacao();
+        break;
+      default:
+        // Caso não bata com nenhum conhecido, tenta chamar a função baseada no nome do arquivo (sem pasta)
+        try {
+          const base = normalized.split('/').pop().replace(/\.js$/, '');
+          // mapear nomes conhecidos para funções
+          const map = {
+            'calculadoraDeImc': 'calcularIndiceMassaCorporal',
+            'conversorDeTemperatura': 'executarConversor',
+            'decisaoDeCompra': 'executarDecisaoDeCompra',
+            'idadeDoCachorro': 'executarIdadeDoCachorro',
+            'verificandoVotacao': 'executarVerificacaoVotacao'
+          };
+          const fnName = map[base];
+          if (fnName && typeof window[fnName] === 'function') window[fnName]();
+        } catch (e) {
+          // silencioso — se não encontrar, nada a fazer
+        }
         break;
     }
   };
