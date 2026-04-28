@@ -1,4 +1,4 @@
-// Idade do Cachorro — versão JavaScript
+// Idade do Cachorro 
 
 function pedirIdadeDoCachorro() {
   while (true) {

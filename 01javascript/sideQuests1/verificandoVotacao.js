@@ -1,4 +1,4 @@
-// Verificando Votação — versão JavaScript
+// Verificando Votação
 
 function pedirIdadeDoUsuario() {
   while (true) {
