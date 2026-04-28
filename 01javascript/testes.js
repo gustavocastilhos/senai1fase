@@ -23,8 +23,8 @@ function pedirIdade() {
     while (true) {
         const entrada = prompt("Digite sua idade:");
         if (entrada === null) return null;
-        const v = entrada.trim();
-        if (/^\d+$/.test(v) && Number(v) > 0) return Number(v);
+    const valorFormatado = entrada.trim();
+    if (/^\d+$/.test(valorFormatado) && Number(valorFormatado) > 0) return Number(valorFormatado);
         if (!confirm("Idade inválida. Deseja tentar novamente?")) return null;
     }
 }
@@ -33,9 +33,9 @@ function pedirNota() {
     while (true) {
         const entrada = prompt("Digite a nota do aluno (0-10):");
         if (entrada === null) return null;
-        const v = entrada.replace(",", ".").trim();
-        const n = Number(v);
-        if (!isNaN(n) && n >= 0 && n <= 10) return n;
+    const valorFormatado = entrada.replace(",", ".").trim();
+    const numeroNota = Number(valorFormatado);
+    if (!isNaN(numeroNota) && numeroNota >= 0 && numeroNota <= 10) return numeroNota;
         if (!confirm("Nota inválida. Deseja tentar novamente?")) return null;
     }
 }

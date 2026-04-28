@@ -37,4 +37,4 @@ function executarConversor() {
   const temperaturaFahrenheit = converterCelsiusParaFahrenheit(temperaturaCelsius);
   mostrarResultado(temperaturaCelsius, temperaturaFahrenheit);
 }
-executarConversor();
+// Removida execução automática para permitir execução via botão no HTML

@@ -46,4 +46,4 @@ function calcularIndiceMassaCorporal() {
   alert(mensagemResultado);
 }
 
-calcularIndiceMassaCorporal();
+// Removida execução automática para permitir execução via botão no HTML
