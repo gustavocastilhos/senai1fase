@@ -63,4 +63,3 @@ if (nota >= 7) {
 } else {
     alert(`O aluno ${nome} tem ${idade} anos e a nota é ${nota}, foi reprovado!`);
 }
-// ...existing code...
