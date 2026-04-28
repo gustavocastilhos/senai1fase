@@ -9,13 +9,18 @@
         <h1>Introdução ao JavaScript</h1>
         <h2>Side Quests 1 - Demos</h2>
         <div id="sidequests-list">
-            <button data-src="01javascript/sideQuests1/calculadoraDeImc.js">Calculadora de IMC</button>
-            <button data-src="01javascript/sideQuests1/conversorDeTemperatura.js">Conversor de Temperatura</button>
-            <button data-src="01javascript/sideQuests1/decisaoDeCompra.js">Decisão de Compra</button>
-            <button data-src="01javascript/sideQuests1/idadeDoCachorro.js">Idade do Cachorro</button>
-            <button data-src="01javascript/sideQuests1/verificandoVotacao.js">Verificando Votação</button>
+            <button onclick="calcularIndiceMassaCorporal()">Calculadora de IMC</button>
+            <button onclick="executarConversor()">Conversor de Temperatura</button>
+            <button onclick="executarDecisaoDeCompra()">Decisão de Compra</button>
+            <button onclick="executarIdadeDoCachorro()">Idade do Cachorro</button>
+            <button onclick="executarVerificacaoVotacao()">Verificando Votação</button>
         </div>
 
-        <script src="01javascript/core/loader.js"></script>
+        <!-- Simplicidade: carregamos os scripts diretamente para permitir execução por onclick -->
+        <script src="01javascript/sideQuests1/calculadoraDeImc.js"></script>
+        <script src="01javascript/sideQuests1/conversorDeTemperatura.js"></script>
+        <script src="01javascript/sideQuests1/decisaoDeCompra.js"></script>
+        <script src="01javascript/sideQuests1/idadeDoCachorro.js"></script>
+        <script src="01javascript/sideQuests1/verificandoVotacao.js"></script>
     </body>
 </html>
