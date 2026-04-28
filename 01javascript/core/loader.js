@@ -1,12 +1,12 @@
-// Loader para Side Quests 1
-// Carrega scripts quando o usuario clica nos botoes
+// Loader para Side Quests 1 (movido para core)
+// Carrega scripts dinamicamente quando o usuário clica nos botões
 
 document.getElementById('sidequests-list').addEventListener('click', function (e) {
   if (e.target.tagName !== 'BUTTON') return;
   const src = e.target.getAttribute('data-src');
   const existing = document.querySelector('script[data-loaded="' + src + '"]');
   if (existing) {
-    // ja carregado — reexecutar pedindo ao usuario para recarregar a pagina
+    // já carregado — reexecutar pedindo ao usuário para recarregar a página
     if (confirm('Este exercício já foi carregado. Deseja recarregar a página para executar novamente?')) location.reload();
     return;
   }
@@ -15,7 +15,7 @@ document.getElementById('sidequests-list').addEventListener('click', function (e
   scriptElement.src = src;
   scriptElement.setAttribute('data-loaded', src);
   scriptElement.onload = function () {
-    // chamar a funçao principal apos carregar cada script
+    // chamar a função principal após carregar cada script
     switch (src) {
       case 'sideQuests1/calculadoraDeImc.js':
         if (typeof calcularIndiceMassaCorporal === 'function') calcularIndiceMassaCorporal();
@@ -36,3 +36,5 @@ document.getElementById('sidequests-list').addEventListener('click', function (e
   };
   document.body.appendChild(scriptElement);
 });
+
+// Nota: este arquivo depende do HTML conter o elemento #sidequests-list com botões
