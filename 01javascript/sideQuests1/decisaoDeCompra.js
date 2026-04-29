@@ -23,10 +23,12 @@ function pedirSaldo() {
 
 function executarDecisaoDeCompra() {
   const precoDoItem = pedirPrecoDoItem();
-  if (precoDoItem === null) { alert('Operação cancelada.'); return; }
+  if (precoDoItem === null) {// alert('Operação cancelada.');
+     return; }
 
   const saldo = pedirSaldo();
-  if (saldo === null) { alert('Operação cancelada.'); return; }
+  if (saldo === null) { //alert('Operação cancelada.');
+     return; }
 
   if (precoDoItem <= saldo) {
     alert('Parabéns, você tem capacidade financeira para comprar o seu item!');

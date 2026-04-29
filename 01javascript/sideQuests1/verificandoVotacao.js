@@ -13,7 +13,8 @@ function pedirIdadeDoUsuario() {
 
 function executarVerificacaoVotacao() {
   const idadeDoUsuario = pedirIdadeDoUsuario();
-  if (idadeDoUsuario === null) { alert('Operação cancelada.'); return; }
+  if (idadeDoUsuario === null) { //alert('Operação cancelada.'); 
+  return; }
 
   const idadeMinimaParaVotar = 16;
   if (idadeDoUsuario >= idadeMinimaParaVotar) {

@@ -30,7 +30,7 @@ function mostrarResultado(temperaturaCelsius, temperaturaFahrenheit) {
 function executarConversor() {
   const temperaturaCelsius = pedirTemperaturaCelsius();
   if (temperaturaCelsius === null) {
-    alert('Operação cancelada.');
+    //alert('Operação cancelada.');
     return;
   }
 

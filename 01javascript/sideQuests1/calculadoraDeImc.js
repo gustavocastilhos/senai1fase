@@ -27,17 +27,17 @@ function classificarIndiceMassaCorporal(indiceMassaCorporal) {
 }
 
 function calcularIndiceMassaCorporal() {
-  const pesoKg = pedirPeso();
+ const pesoKg = pedirPeso();
   if (pesoKg === null) {
-    alert('Operação cancelada.');
+  //  alert('Operação cancelada.');
     return;
   }
 
   const alturaM = pedirAltura();
-  if (alturaM === null) {
-    alert('Operação cancelada.');
+ if (alturaM === null) {
+ // alert('Operação cancelada.');
     return;
-  }
+ }
 
   const indiceMassaCorporal = pesoKg / (alturaM * alturaM);
   const classificacao = classificarIndiceMassaCorporal(indiceMassaCorporal);

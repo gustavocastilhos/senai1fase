@@ -23,10 +23,12 @@ function pedirSexoDoCachorro() {
 
 function executarIdadeDoCachorro() {
   const idadeDoCachorro = pedirIdadeDoCachorro();
-  if (idadeDoCachorro === null) { alert('Operação cancelada.'); return; }
+  if (idadeDoCachorro === null) {// alert('Operação cancelada.');
+   return; }
 
   const sexoDoCachorro = pedirSexoDoCachorro();
-  if (sexoDoCachorro === null) { alert('Operação cancelada.'); return; }
+  if (sexoDoCachorro === null) { //alert('Operação cancelada.');
+     return; }
 
   const anosHumanosPorAnoCachorro = 7;
   const idadeEmAnosHumanos = idadeDoCachorro * anosHumanosPorAnoCachorro;
