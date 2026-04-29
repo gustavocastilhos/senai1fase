@@ -1,15 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
-h1 {
-  color: #ffffff; /* Um tom de azul escuro acinzentado, muito elegante */
+    padding: 20px 2vw; /* Dá um espaço em cima/embaixo (20px) e nas laterais (2% da largura da tela) */
+    max-width: 1500px; /* Impede que o conteúdo passe de 1500px de largura */
+    margin: 0 auto;    /* Centraliza todo o bloco do site no meio do monitor */
+   
+    hr {
+    border: 0;
+    height: 2px;
+    background-color: #a29bfe; /* Um roxo um pouquinho mais claro */
+    /* A sombra da mesma cor cria o efeito neon! */
+    box-shadow: 0 0 10px #6c5ce7, 0 0 20px #6c5ce7; 
+    margin: 30px 0;
+}
+    h1{color: #ffffff; /* Branco puro para o título principal */}
+    h2{color: #ffffff; /* Branco puro para os títulos secundários */}
+    h1, h2 {text-align: center; /* Centraliza os títulos */}
+
+#sidequests-list {
+  display: flex;             /* Ativa o modo de organização super flexível */
+  justify-content: center;   /* Essa é a mágica: empurra todos os botões para o centro! */
+  flex-wrap: wrap;           /* Se a tela for pequena, permite que os botões pulem para a linha de baixo em vez de espremerem */
+  gap: 15px;                 /* Cria um espaçamento exato de 15px entre os botões */
+  margin-top: 20px;          /* Dá um espaço para desgrudar da linha neon */
 }
 
-h2 {
-  color: #ffffff; /* Um roxo vibrante para destacar as Side Quests */
-}
 button {
   background-color: #635d9c; /* Cor de fundo do botão */
   color: white;              /* Cor da letra do botão */
@@ -29,6 +48,9 @@ button:hover {
   transform: scale(1.03); /* Dá um leve zoom para dar feedback visual */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* A sombra fica maior e mais escura quando o botão "cresce" */
 }
-
+button:active {
+  transform: scale(0.95); /* Dá uma leve "esmagada" no botão */
+  background-color: #5f27cd; /* Deixa a cor um tom mais escuro ao clicar */
+}
 
 }
