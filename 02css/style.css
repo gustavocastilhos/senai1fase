@@ -53,4 +53,17 @@ button:active {
   background-color: #5f27cd; /* Deixa a cor um tom mais escuro ao clicar */
 }
 
+footer {
+    margin-top: 50px;       /* Dá um bom espaço do conteúdo acima */
+    padding: 20px 0;        /* Espaço interno para o texto não ficar apertado */
+    text-align: center;      /* Centraliza o texto perfeitamente */
+    border-top: 1px solid rgba(108, 92, 231, 0.3); /* Uma linha roxa bem clarinha e sutil */
+}
+
+footer p {
+    color: #a29bfe;         /* Usa o roxo claro que você já usou nos botões */
+    font-size: 14px;        /* Texto um pouco menor que o normal */
+    opacity: 0.7;           /* Deixa levemente transparente para ser secundário */
+    letter-spacing: 1px;    /* Dá um espacinho entre as letras para ficar moderno */
+}
 }
