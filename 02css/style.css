@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+h1 {
+  color: #ffffff; /* Um tom de azul escuro acinzentado, muito elegante */
+}
+
+h2 {
+  color: #ffffff; /* Um roxo vibrante para destacar as Side Quests */
+}
+button {
+  background-color: #635d9c; /* Cor de fundo do botão */
+  color: white;              /* Cor da letra do botão */
+  padding: 10px 20px;        /* Espaço interno (10px em cima/embaixo, 20px nas laterais) */
+  border: none;              /* Tira aquela borda 3D antiga do navegador */
+  border-radius: 8px;        /* Deixa os cantos arredondados e modernos */
+  font-size: 16px;           /* Aumenta a letrinha do botão */
+  cursor: pointer;           /* Faz o mouse virar uma "mãozinha" ao passar por cima */
+  margin: 5px;               /* Dá um espaço para os botões não colarem uns nos outros */
+  transition: transform 0.2s, background-color 0.2s; /* Animação suave para transformações e mudanças de cor */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra preta com 30% de transparência */
+}
+
+/* O Efeito "Hover" (Quando o mouse passa por cima) */
+button:hover {
+  background-color: #a29bfe; /* Fica com uma cor mais clara para mostrar que é clicável */
+  transform: scale(1.03); /* Dá um leve zoom para dar feedback visual */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* A sombra fica maior e mais escura quando o botão "cresce" */
+}
+
+
+}
