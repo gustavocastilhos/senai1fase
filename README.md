@@ -17,6 +17,8 @@ Repositório com os programas, exercícios e aprendizados desenvolvidos durante 
 ```bash
 .
 ├── 00portugol       # Exercícios iniciais de lógica
-├── 01javascript     # Primeiros códigos em JavaScript
+├── 01javascript     # Códigos em JavaScript
+├── 02css
+├── index.html
 ├── README.md
 └── LICENSE
