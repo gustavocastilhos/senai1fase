@@ -7,6 +7,7 @@ Repositório com os programas, exercícios e aprendizados desenvolvidos durante 
 ## 🚀 Tecnologias utilizadas
 
 - 💻 JavaScript
+- 🎨 CSS
 - 🧠 Lógica de Programação
 - 📂 Organização de projetos
 
@@ -15,7 +16,7 @@ Repositório com os programas, exercícios e aprendizados desenvolvidos durante 
 ## 📁 Estrutura do projeto
 
 ```bash
-.
+
 ├── 00portugol       # Exercícios iniciais de lógica
 ├── 01javascript     # Códigos em JavaScript
 ├── 02css
