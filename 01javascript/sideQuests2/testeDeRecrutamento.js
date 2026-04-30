@@ -8,9 +8,9 @@ temRecomendacao = prompt("O aspirante a marujo tem recomendação?: ").toLowerCa
 
 // Lógica de decisão
 if (idade > 16 && sabeNadar === "sim") {
-    alert("Aprovado para o navio!");
+      document.getElementById('resultado').innerHTML = `Aprovado. Bem-vindo ao mar!`;  
 } else if ((sabeNadar === "nao" || sabeNadar === "sim") && temRecomendacao === "sim" && idade >= 14) {
-    alert("Aprovado sob recomendação. Monitorar nas primeiras viagens");
+    document.getElementById('resultado').innerHTML = `Aprovado sob recomendação. Monitorar nas primeiras viagens`;
 } else {
-    alert("Reprovado. Volte quando estiver mais preparado para o mar.");
+    document.getElementById('resultado').innerHTML = `Reprovado. Volte quando estiver mais preparado para o mar.`;
 }

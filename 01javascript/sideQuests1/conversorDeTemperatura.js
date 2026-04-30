@@ -24,7 +24,7 @@ function mostrarResultado(temperaturaCelsius, temperaturaFahrenheit) {
     mensagemResultado += '\nNão está muito quente.';
   }
   mensagemResultado += '\n=======================================\n';
-  alert(mensagemResultado);
+      document.getElementById('resultado').innerHTML = `${mensagemResultado.replace(/\n/g, '<br>')}`;  
 }
 
 function executarConversor() {

@@ -31,9 +31,9 @@ function executarDecisaoDeCompra() {
      return; }
 
   if (precoDoItem <= saldo) {
-    alert('Parabéns, você tem capacidade financeira para comprar o seu item!');
+      document.getElementById('resultado').innerHTML = `Você pode comprar o item.`;  
   } else {
-    alert('Infelizmente suas capacidades financeiras não são o suficiente para comprar este item!');
+    document.getElementById('resultado').innerHTML = `Infelizmente suas capacidades financeiras não são o suficiente para comprar este item!`;
   }
 }
 

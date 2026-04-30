@@ -35,10 +35,9 @@ function executarIdadeDoCachorro() {
 
   if (sexoDoCachorro === 'feminino') {
     if (idadeEmAnosHumanos > 62) {
-      alert('Seu cachorro pode se aposentar');
+      document.getElementById('resultado').innerHTML = `Seu cachorro pode se aposentar.`;  
     } else {
-      alert('Seu cachorro não pode se aposentar');
-    }
+      document.getElementById('resultado').innerHTML = `Seu cachorro não pode se aposentar.`;  }
   } else {
     if (idadeEmAnosHumanos > 65) {
       document.getElementById('resultado').innerHTML = `Seu cachorro pode se aposentar.`;  
