@@ -18,10 +18,9 @@ function executarVerificacaoVotacao() {
 
   const idadeMinimaParaVotar = 16;
   if (idadeDoUsuario >= idadeMinimaParaVotar) {
-    alert('Você pode votar!');
-  } else {
-    alert('Você ainda não pode votar.');
-  }
+document.getElementById('resultado').innerHTML = "Você pode votar!";  
+} else {
+document.getElementById('resultado').innerHTML = `Faltam <span>${idadeMinimaParaVotar - idadeDoUsuario}</span> anos para você poder votar.`;  }
 }
 
 // Removida execução automática para permitir execução via botão no HTML

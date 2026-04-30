@@ -43,7 +43,8 @@ function calcularIndiceMassaCorporal() {
   const classificacao = classificarIndiceMassaCorporal(indiceMassaCorporal);
 
   const mensagemResultado = `Seu IMC é ${indiceMassaCorporal.toFixed(2)}. Classificação: ${classificacao}.`;
-  alert(mensagemResultado);
+ let tela = document.getElementById("resultado");
+    tela.innerHTML = "O seu IMC calculado é: <span>" + indiceMassaCorporal.toFixed(2) + "</span>";
 }
 
 // Removida execução automática para permitir execução via botão no HTML
