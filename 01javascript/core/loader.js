@@ -1,4 +1,4 @@
-// Loader para Side Quests 1 (movido para core)
+// Loader atualmente suporta as Side Quests 1, mas foi projetado para ser facilmente estendido para as Side Quests 2 e além, sem necessidade de modificar o HTML ou adicionar novos scripts manualmente. Basta seguir a convenção de nomeação e estrutura de pastas, e o loader cuidará do resto!
 // Carrega scripts dinamicamente quando o usuário clica nos botões
 
 // Helper: chama a função principal associada a um src (suporta src com ou sem prefixos)

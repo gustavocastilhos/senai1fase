@@ -5,8 +5,8 @@ let sabeNadar, temRecomendacao, idade;
 
 // Entrada de dados
 idade = parseInt(prompt("Qual a idade do aspirante a marujo?: "));
-sabeNadar = prompt("O aspirante a marujo sabe nadar?: ").toLowerCase();
-temRecomendacao = prompt("O aspirante a marujo tem recomendação?: ").toLowerCase();
+sabeNadar = prompt("O aspirante a marujo sabe nadar?: (sim/nao) ").toLowerCase();
+temRecomendacao = prompt("O aspirante a marujo tem recomendação?:(sim/nao) ").toLowerCase();
 
 // Lógica de decisão
 if (idade > 16 && sabeNadar === "sim") {
