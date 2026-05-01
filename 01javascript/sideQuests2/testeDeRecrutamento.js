@@ -1,3 +1,5 @@
+
+function testeDeRecrutamento() {
 // Declaração das variáveis
 let sabeNadar, temRecomendacao, idade;
 
@@ -13,4 +15,5 @@ if (idade > 16 && sabeNadar === "sim") {
     document.getElementById('resultado').innerHTML = `Aprovado sob recomendação. Monitorar nas primeiras viagens`;
 } else {
     document.getElementById('resultado').innerHTML = `Reprovado. Volte quando estiver mais preparado para o mar.`;
+}
 }
