@@ -1,12 +1,12 @@
 function executarLiberacaoJaula() {
     // Usamos parseInt() para converter o texto do prompt em um número inteiro
-    let visitantesNaArea = parseInt(prompt("Qual a quantidade de visitantes na área?: "));
+    let visitantesNaArea = parseInt(prompt("Qual a quantidade de visitantes na área?: (ex: 100)"));
     
     // Verificação de segurança: se o usuário cancelar o prompt, para a função
     if (isNaN(visitantesNaArea)) {
         return; 
     }
-    let horaAtual = parseInt(prompt("Qual a hora atual?: "));
+    let horaAtual = parseInt(prompt("Qual a hora atual?: (ex: 14)"));
 
     if (isNaN(horaAtual)) {
         return;
