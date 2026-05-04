@@ -2,7 +2,7 @@
 
 function pedirIdadeDoUsuario() {
   while (true) {
-    const entrada = prompt('Qual sua idade?');
+    const entrada = prompt('Qual sua idade? (ex: 18)');
     if (entrada === null) return null;
     const valorFormatado = entrada.replace(',', '.').trim();
     const numeroConvertido = Number(valorFormatado);
