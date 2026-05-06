@@ -23,9 +23,17 @@ function executarCalculadoraSimples() {
             resultadoCalculo = primeiroNumero * segundoNumero;
             break;
         case "/":
+            // Adicionei uma verificação de segurança para divisão por zero
+            if (segundoNumero === 0) {
+                resultadoCalculo = "Não é possível dividir por 0";
+            } else {
+                resultadoCalculo = primeiroNumero / segundoNumero;
+            }
+            break;
+        default:
+            alert("Operação inválida!");
+            return;
         
     }
-
-    // Exibição do resultado final no elemento HTML
     document.getElementById('resultado').innerHTML = "O resultado da operação é: " + resultadoCalculo;
 }
