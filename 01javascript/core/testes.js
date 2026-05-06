@@ -1,5 +1,3 @@
-// Copiado para core/testes.js
-
 let nome;
 let idade;
 // Testa se a pessoa realmente digitou um nome de verdade (nada de deixar em branco ou só dar espaço).function pedirNome() 
