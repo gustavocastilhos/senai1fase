@@ -9,18 +9,21 @@
     <body>
         <h1>Introdução ao JavaScript</h1>
         <hr>
-        <h2>Side Quests 1 - Demos</h2>
-        <div id="sidequests-list">
+        <details>
+            <summary>Side Quests 1 – Demos</summary>
+            <div id="sidequests-list"> 
             <button onclick="calcularIndiceMassaCorporal()">Calculadora de IMC</button>
             <button onclick="executarConversor()">Conversor de Temperatura</button>
             <button onclick="executarDecisaoDeCompra()">Decisão de Compra</button>
             <button onclick="executarIdadeDoCachorro()">Idade do Cachorro</button>
             <button onclick="executarVerificacaoVotacao()">Verificando Votação</button>
-        </div>
-        <hr>                
-
-        <h2>Side Quests 2 - Novos Desafios</h2>
-    <div id="sidequests2-list">
+            </div>  
+            </details>
+        <hr>  
+         <details>
+              
+    <summary>Side Quests 2 – Novos Desafios</summary>
+            <div id="sidequests2-list">
             <button onclick="verificarDiasNoMes()">Dias no Mês</button>
             <button onclick="executarCalculadoraSimples()">Calculadora Simples</button>
             <button onclick="executarLiberacaoJaula()">Liberar Jaula</button> 
@@ -28,13 +31,18 @@
             <button onclick="verificarDiaDaSemana()">Verificar Dia da Semana</button>
 
             </div>
+                </details>
+
           <hr>
-           <h2>Desafios hard?</h2>
+        
+        <details>
+            <summary>Desafios Hard</summary>
             <div id="desafios-hard">
             <button onclick="desafio1()">StarUbers</button>
             <button onclick="desafio2()">Empréstimo</button>
-            
         </div>
+                </details>
+            <hr>
           <div id="resultado"><p>O resultado da sua Side Quest aparecerá aqui...</p></div>
     
         <!-- Simplicidade: carregamos os scripts diretamente para permitir execução por onclick -->

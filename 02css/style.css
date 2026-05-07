@@ -85,4 +85,34 @@ footer p {
     font-weight: bold;
     font-size: 24px;
 }
+/* Remove a setinha padrão do navegador (opcional) */
+summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: color 0.3s;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Efeito ao passar o mouse no título */
+summary:hover {
+  color: #a855f7; /* Cor roxa da sua linha */
+}
+
+/* Estilo para os botões aparecerem alinhados quando abrir */
+.container-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+  border-top: 1px solid #4b2c85; /* Linha roxa suave */
+}
 }
