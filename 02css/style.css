@@ -21,7 +21,7 @@ body{
     h2{color: #ffffff; /* Branco puro para os títulos secundários */}
     h1, h2 {text-align: center; /* Centraliza os títulos */}
 
-#sidequests-list, #sidequests2-list {
+#sidequests-list, #sidequests2-list, #desafios-hard {
   display: flex;             /* Ativa o modo de organização super flexível */
   justify-content: center;   /* Essa é a mágica: empurra todos os botões para o centro! */
   flex-wrap: wrap;           /* Se a tela for pequena, permite que os botões pulem para a linha de baixo em vez de espremerem */
