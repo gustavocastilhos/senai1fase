@@ -1,7 +1,10 @@
 function desafio1() {
     let distanciaEmKm = parseFloat(prompt("Digite a distância em quilômetros:"));
     let velocidade = 300000; // velocidade da luz em km/s
-
+ if (isNaN(distanciaEmKm) || distanciaEmKm <= 0) {
+        alert("Erro: Por favor, insira um valor numérico maior que zero para a distância.");
+        return;
+    }
     let tempoTotal = distanciaEmKm / velocidade;
     let resultado = "Tempo: " + tempoTotal.toFixed(2) + " segundos";
 
@@ -18,13 +21,14 @@ function desafio1() {
         segundosRestantes %= 3600;
         
         let minutos = Math.floor(segundosRestantes / 60);
-        
+
         resultado += " ou ";
-        if (anos > 0) resultado += anos + " anos, ";
-        if (dias > 0) resultado += dias + " dias, ";
-        if (horas > 0) resultado += horas + " horas ";
-        if (minutos > 0) resultado += "e " + minutos + " minutos";
+        if (anos > 0) resultado +=  anos + " anos, ";
+        if (dias > 0) resultado +=   dias + " dias, ";
+        if (horas > 0) resultado +=   horas + " horas ";
+        if (minutos > 0) resultado += " e " + minutos + " minutos";
     }
+
 
     document.getElementById('resultado').innerHTML = resultado + ".";
 }
