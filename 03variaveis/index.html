@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+</head>
+<body>
+    <h1>Variaveis</h1>
+    <hr>
+    <input type="number" id="inputVenda" placeholder="Valor da venda">
+    <button onclick="registrarVenda()">Registrar Venda</button>
+    <h3>Total acumulado: R$ <span id="p-total">0</span></h3>
+    <button onclick="zerarContagemVendas()">Limpar</button>
+
+    <hr>
+    <button onclick="zerarContagem()">Limpar</button>
+    <button onclick="incrementarContagem()">+1</button>
+    <button onclick="adicionarDez()">+10</button>
+    <button onclick="adicionarSessemtaSete()">+67</button>
+
+    <hr>
+    
+    <p id="p-contagem">0</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
