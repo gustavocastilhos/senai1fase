@@ -115,4 +115,28 @@ summary:hover {
   padding: 20px 0;
   border-top: 1px solid #4b2c85; /* Linha roxa suave */
 }
+.linha-gradient {
+  height: 1px; /* Espessura da linha */
+  width: 100%; /* Largura total */
+  background: linear-gradient(
+    to right, 
+    transparent, 
+    #8a2be2, 
+    transparent
+  );
+  margin: 20px 0; /* Espaçamento para não grudar nos textos */
+}
+.linha-gradient-glow {
+  height: 2px;
+  width: 80%; /* Um pouco menor para centralizar */
+  margin: 30px auto; 
+  background: linear-gradient(
+    to right, 
+    rgba(138, 43, 226, 0), 
+    rgba(138, 43, 226, 1), 
+    rgba(138, 43, 226, 0)
+  );
+  box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.5);
+  border-radius: 50%; /* Suaviza as pontas */
+}
 }

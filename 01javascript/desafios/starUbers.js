@@ -28,14 +28,12 @@ function desafio1() {
         if (anos > 0) resultado +=  anos + " anos, ";
         if (dias > 0) resultado +=   dias + " dias, ";
         if (horas > 0) resultado +=   horas + " horas ";
-        if (horas === 0 ) {
-        
+        if (horas === 0 && dias === 0 ) {
         if (minutos > 0) resultado +=  minutos + " minutos";
          }else {
             if (minutos > 0) resultado += " e " + minutos + " minutos";
          }
     }
-
 
     document.getElementById('resultado').innerHTML = resultado + ".";
 }

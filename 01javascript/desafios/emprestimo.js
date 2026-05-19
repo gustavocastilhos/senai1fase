@@ -7,7 +7,6 @@ function desafio2() {
 if (isNaN(salario) || salario <= 0 || 
     isNaN(valorDoimprestimo) || valorDoimprestimo <= 0 || 
     isNaN(parcelas) || parcelas <= 0) {
-    
     alert("Erro: Por favor, insira valores numéricos maiores que zero.");
     return;
 }
