@@ -1,0 +1,106 @@
+/* Configuração geral da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título Principal */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Linhas divisórias */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Inputs (Campo de digitar valor) */
+input[type="number"] {
+    width: 65%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #3498db;
+}
+
+/* Botões Gerais */
+button {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin: 4px;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Botão Registrar Venda (Verde) */
+button[onclick="registrarVenda()"] {
+    background-color: #2ecc71;
+    color: white;
+    width: 30%;
+}
+
+button[onclick="registrarVenda()"]:hover {
+    background-color: #27ae60;
+}
+
+/* Botões de Limpar (Vermelhos) */
+button[onclick^="zerarContagem"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button[onclick^="zerarContagem"]:hover {
+    background-color: #c0392b;
+}
+
+/* Botões Incrementadores (+1, +10, +67 - Azuis) */
+button[onclick^="incrementarContagem"], 
+button[onclick^="adicionarDez"], 
+button[onclick^="adicionarSessemtaSete"] {
+    background-color: #3498db;
+    color: white;
+}
+
+button[onclick^="incrementarContagem"]:hover, 
+button[onclick^="adicionarDez"]:hover, 
+button[onclick^="adicionarSessemtaSete"]:hover {
+    background-color: #2980b9;
+}
+
+/* Lista de Histórico de Vendas */
+#listaVendas {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #2ecc71;
+    margin: 15px 0;
+    max-height: 150px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 16px;
+}

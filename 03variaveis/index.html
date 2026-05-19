@@ -10,9 +10,10 @@
     <hr>
     <input type="number" id="inputVenda" placeholder="Valor da venda">
     <button onclick="registrarVenda()">Registrar Venda</button>
-    <h3>Total acumulado: R$ <span id="p-total">0</span></h3>
-    <button onclick="zerarContagemVendas()">Limpar</button>
+    <h3 id="totalVendido">Total de vendas: R$ 0.00</h3>
+    <div id="listaVendas"></div>
 
+    <button onclick="zerarContagemVendas()">Limpar vendas</button>
     <hr>
     <button onclick="zerarContagem()">Limpar</button>
     <button onclick="incrementarContagem()">+1</button>
@@ -24,5 +25,6 @@
     <p id="p-contagem">0</p>
 
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </body>
 </html>
