@@ -1,0 +1,97 @@
+/* Reset básico para garantir que não haja margens indesejadas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fundo escuro e centralização */
+body {
+    background-color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* O "cartão" principal */
+.container {
+    background-color: #e3e3e3;
+    padding: 35px 40px;
+    border-top: 4px solid #4a934a;
+    border-bottom: 4px solid #4a934a;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidade */
+}
+
+/* Título */
+h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #2c2c2c;
+}
+
+/* Agrupamento dos textos verdes e do reset */
+.status-group {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo dos textos de pontuação */
+.text-green {
+    color: #388e3c;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+button {
+    background-color: #35393f;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #282b30;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout flexível para os botões de dados */
+.dice-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dice-container button {
+    flex: 1;
+    min-width: 55px;
+    text-align: center;
+    padding: 12px 0;
+}

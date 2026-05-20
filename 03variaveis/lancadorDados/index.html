@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Lançador de dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dados da Dona Bete 🎲</h1>
+
+        <div class="status-group">
+            <div class="row">
+                <p class="text-green">Total das rolagens: <span id="total">0</span></p>
+                <button class="btn" id="btn-reset">Reset</button>
+            </div>
+            <p class="text-green">Último dado: <span id="ultimo">0</span></p>
+        </div>
+
+        <div class="dice-container">
+            <button class="btn btn-dice" onclick="rolarDado(2)">D2</button>
+            <button class="btn btn-dice" onclick="rolarDado(4)">D4</button>
+            <button class="btn btn-dice" onclick="rolarDado(6)">D6</button>
+            <button class="btn btn-dice" onclick="rolarDado(10)">D10</button>
+            <button class="btn btn-dice" onclick="rolarDado(12)">D12</button>
+            <button class="btn btn-dice" onclick="rolarDado(20)">D20</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
