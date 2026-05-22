@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina do Jogo do Dino - Dona Bete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Jogo do Dino <button id="btn-secret" title="Painel da Dona Bete"></button></h1>
+            <p class="subtitle">O preferido do público! Escolha o seu dino e ganhe o dobro!</p>
+        </header>
+
+        <section class="bet-section">
+            <label for="bet-amount">Valor da Aposta (R$):</label>
+            <input type="number" id="bet-amount" min="1" placeholder="Ex: 10" value="10">
+            
+            <div class="control-buttons">
+                <button id="btn-surpresinha" class="btn-secondary">Surpresinha 🎲</button>
+                <button id="btn-apostar" class="btn-primary">Confirmar Aposta 🦖</button>
+            </div>
+        </section>
+
+        <section class="dino-grid-section">
+            <h3>Escolha o seu Dinossauro:</h3>
+            <div class="dino-grid" id="dino-grid">
+                </div>
+        </section>
+
+        <section class="result-section" id="result-box">
+            <p id="result-text">Selecione um dinossauro, defina o valor e aposte!</p>
+            <div id="dino-drawn-display"></div>
+            <button id="btn-50x" style="display: none;" class="btn-danger">Chance Única: 50x! 🔥</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
