@@ -19,7 +19,8 @@ Repositório com os programas, exercícios e aprendizados desenvolvidos durante 
 
 ├── 00portugol       # Exercícios iniciais de lógica
 ├── 01javascript     # Códigos em JavaScript
-├── 02css
+├── 02css            # Códigos css
+├── 03variaveis      # Codigos com variaveis
 ├── index.html
-├── README.md
-└── LICENSE
+├── LICENSE
+└── README.md
