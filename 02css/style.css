@@ -1,142 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
-body{
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    padding: 20px 2vw; /* Dá um espaço em cima/embaixo (20px) e nas laterais (2% da largura da tela) */
-    max-width: 1500px; /* Impede que o conteúdo passe de 1500px de largura */
-    margin: 0 auto;    /* Centraliza todo o bloco do site no meio do monitor */
-   
-    hr {
-    border: 0;
-    height: 2px;
-    background-color: #a29bfe; /* Um roxo um pouquinho mais claro */
-    /* A sombra da mesma cor cria o efeito neon! */
-    box-shadow: 0 0 10px #6c5ce7, 0 0 20px #6c5ce7; 
-    margin: 30px 0;
-}
-    h1{color: #ffffff; /* Branco puro para o título principal */}
-    h2{color: #ffffff; /* Branco puro para os títulos secundários */}
-    h1, h2 {text-align: center; /* Centraliza os títulos */}
-
-#sidequests-list, #sidequests2-list, #desafios-hard, #variaveis-list {
-  display: flex;             /* Ativa o modo de organização super flexível */
-  justify-content: center;   /* Essa é a mágica: empurra todos os botões para o centro! */
-  flex-wrap: wrap;           /* Se a tela for pequena, permite que os botões pulem para a linha de baixo em vez de espremerem */
-  gap: 15px;                 /* Cria um espaçamento exato de 15px entre os botões */
-  margin-top: 20px;          /* Dá um espaço para desgrudar da linha neon */
+/* --- VARIÁVEIS (O segredo dos profissionais para organizar cores) --- */
+:root {
+  --bg-dark: #0d0d12;           /* Fundo principal bem escuro */
+  --card-bg: #1a1a24;           /* Fundo das caixas levemente mais claro */
+  --purple-main: #7a28cb;       /* Roxo principal */
+  --purple-light: #a29bfe;      /* Roxo claro para textos e hover */
+  --text-white: #f0f0f5;        /* Branco suave (não cansa a vista) */
+  --neon-shadow: 0 0 15px rgba(122, 40, 203, 0.4);
 }
 
-button {
-  background-color: #635d9c; /* Cor de fundo do botão */
-  color: white;              /* Cor da letra do botão */
-  padding: 10px 20px;        /* Espaço interno (10px em cima/embaixo, 20px nas laterais) */
-  border: none;              /* Tira aquela borda 3D antiga do navegador */
-  border-radius: 8px;        /* Deixa os cantos arredondados e modernos */
-  font-size: 16px;           /* Aumenta a letrinha do botão */
-  cursor: pointer;           /* Faz o mouse virar uma "mãozinha" ao passar por cima */
-  margin: 5px;               /* Dá um espaço para os botões não colarem uns nos outros */
-  transition: transform 0.2s, background-color 0.2s; /* Animação suave para transformações e mudanças de cor */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra preta com 30% de transparência */
+/* --- ESTRUTURA GERAL --- */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0 auto;
+  padding: 40px 2vw;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  max-width: 1000px; /* Um pouco mais estreito para focar a leitura */
 }
 
-/* O Efeito "Hover" (Quando o mouse passa por cima) */
-button:hover {
-  background-color: #a29bfe; /* Fica com uma cor mais clara para mostrar que é clicável */
-  transform: scale(1.03); /* Dá um leve zoom para dar feedback visual */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* A sombra fica maior e mais escura quando o botão "cresce" */
-}
-button:active {
-  transform: scale(0.95); /* Dá uma leve "esmagada" no botão */
-  background-color: #5f27cd; /* Deixa a cor um tom mais escuro ao clicar */
-}
-
-footer {
-    margin-top: 50px;       /* Dá um bom espaço do conteúdo acima */
-    padding: 20px 0;        /* Espaço interno para o texto não ficar apertado */
-    text-align: center;      /* Centraliza o texto perfeitamente */
-    border-top: 1px solid rgba(108, 92, 231, 0.3); /* Uma linha roxa bem clarinha e sutil */
+/* --- TIPOGRAFIA --- */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  /* Efeito de Gradiente no Texto */
+  background: linear-gradient(90deg, var(--purple-light), var(--purple-main));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
 }
 
-footer p {
-    color: #a29bfe;         /* Usa o roxo claro que você já usou nos botões */
-    font-size: 14px;        /* Texto um pouco menor que o normal */
-    opacity: 0.7;           /* Deixa levemente transparente para ser secundário */
-    letter-spacing: 1px;    /* Dá um espacinho entre as letras para ficar moderno */
-}
-#resultado {
-    background-color: #1e1e2f;  /* Um fundo ainda mais escuro para destacar */
-    border: 2px solid #6c5ce7;  /* Borda roxa combinando com os botões */
-    border-radius: 10px;        /* Cantos arredondados */
-    padding: 20px;
-    margin: 30px auto;          /* Centraliza a caixa na tela */
-    max-width: 600px;           /* Não deixa a caixa ficar larga demais */
-    text-align: center;
-    color: #a29bfe;             /* Letra roxa clara */
-    font-size: 18px;
-    box-shadow: 0 0 15px rgba(108, 92, 231, 0.2); /* Um leve neon em volta da caixa */
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-white);
 }
 
-/* Um destaque especial para quando o número aparecer */
-#resultado span {
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
+/* --- SEÇÕES & CARDS (Deixa o visual menos 'chapado') --- */
+details {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(122, 40, 203, 0.2);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow: hidden; 
+  transition: all 0.3s ease;
 }
-/* Remove a setinha padrão do navegador (opcional) */
+
+details:hover {
+  border-color: var(--purple-main);
+  box-shadow: var(--neon-shadow);
+}
+
 summary {
   list-style: none;
   cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-align: center;
   padding: 20px;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
-summary::-webkit-details-marker {
-  display: none;
+summary::-webkit-details-marker { 
+  display: none; 
 }
 
-/* Efeito ao passar o mouse no título */
 summary:hover {
-  color: #a855f7; /* Cor roxa da sua linha */
+  color: var(--purple-light);
+  background-color: rgba(122, 40, 203, 0.05);
 }
 
-/* Estilo para os botões aparecerem alinhados quando abrir */
-.container-botoes {
+/* --- BOTÕES --- */
+#sidequests-list, #sidequests2-list, #desafios-hard, #variaveis-list, .container-botoes {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
-  padding: 20px 0;
-  border-top: 1px solid #4b2c85; /* Linha roxa suave */
+  padding: 20px;
 }
+
+button {
+  background-color: transparent;
+  color: var(--text-white);
+  padding: 12px 24px;
+  border: 2px solid var(--purple-main);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover: Botão acende e levanta um pouquinho */
+button:hover {
+  background-color: var(--purple-main);
+  color: white;
+  transform: translateY(-3px); 
+  box-shadow: var(--neon-shadow);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* --- CAIXA DE RESULTADO --- */
+#resultado {
+  background-color: var(--card-bg);
+  border: 2px solid var(--purple-main);
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+  color: var(--purple-light);
+  font-size: 18px;
+  box-shadow: var(--neon-shadow);
+}
+
+#resultado span {
+  color: #fff;
+  font-weight: 800;
+  font-size: 28px;
+  text-shadow: 0 0 10px var(--purple-main);
+}
+
+/* --- LINHAS E DIVISORES --- */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--purple-main), transparent);
+  margin: 40px 0;
+}
+
 .linha-gradient {
-  height: 1px; /* Espessura da linha */
-  width: 100%; /* Largura total */
-  background: linear-gradient(
-    to right, 
-    transparent, 
-    #8a2be2, 
-    transparent
-  );
-  margin: 20px 0; /* Espaçamento para não grudar nos textos */
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, var(--purple-main), transparent);
+  margin: 20px 0;
 }
+
 .linha-gradient-glow {
   height: 2px;
-  width: 80%; /* Um pouco menor para centralizar */
-  margin: 30px auto; 
-  background: linear-gradient(
-    to right, 
-    rgba(138, 43, 226, 0), 
-    rgba(138, 43, 226, 1), 
-    rgba(138, 43, 226, 0)
-  );
-  box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.5);
-  border-radius: 50%; /* Suaviza as pontas */
+  width: 80%;
+  margin: 30px auto;
+  background: linear-gradient(to right, rgba(138, 43, 226, 0), var(--purple-main), rgba(138, 43, 226, 0));
+  box-shadow: var(--neon-shadow);
+  border-radius: 50%;
 }
+
+/* --- FOOTER --- */
+footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid rgba(122, 40, 203, 0.2);
+}
+
+footer p {
+  color: var(--purple-light);
+  font-size: 12px;
+  opacity: 0.6;
+  letter-spacing: 2px;
+  text-transform: uppercase; /* Dá um tom mais elegante */
 }
