@@ -7,7 +7,19 @@
         <title>Introdução ao JavaScript</title>
     </head>
     <body>
-        <h1>Introdução ao JavaScript</h1>
+        <div class="layout">
+
+    <main class="conteudo">
+        <section class="hero">
+    <span class="hero-tag">SENAI • Introdução à Programação</span>
+
+    <h1>Introdução ao JavaScript</h1>
+
+    <p>
+        Aprenda os fundamentos da programação através de
+        desafios, exercícios e projetos interativos.
+    </p>
+</section>
         <div class="linha-gradient"></div>
         <details>
             <summary>Side Quests 1 – Demos</summary>
@@ -19,7 +31,6 @@
             <button onclick="executarVerificacaoVotacao()">Verificando Votação</button>
             </div>  
             </details>
-        <div class="linha-gradient"></div>
          <details>
               
     <summary>Side Quests 2 – Novos Desafios</summary>
@@ -33,7 +44,6 @@
             </div>
                 </details>
 
-          <div class="linha-gradient"></div>
         
         <details>
             <summary>Desafios Hard</summary>
@@ -43,18 +53,25 @@
             
         </div>
     </details>
-              <div class="linha-gradient"></div>
 
-    <details>
-            <summary>Brincando com as variaveis</summary>
-            <div id="variaveis-list">
-            <button onclick="window.location.href='./03variaveis/contator/index.html'">Contador App</button>
-            <button onclick="window.location.href='./03variaveis/jogoDino/index.html'">Jogo do Dinossauro</button>
-            </div>
-    </details>
-            <div class="linha-gradient"></div>
-          <div id="resultado"><p>O resultado da sua Side Quest aparecerá aqui...</p></div>
-    
+  <section class="playground">
+    <div class="playground-header">
+        <span>🚀 Próximo Passo</span>
+        <h2>Brincando com Variáveis</h2>
+        <p>Projetos interativos para praticar os conceitos aprendidos.</p>
+    </div>
+
+    <div id="variaveis-list">
+        <button onclick="window.location.href='./03variaveis/contator/index.html'">
+            Contador App
+        </button>
+
+        <button onclick="window.location.href='./03variaveis/jogoDino/index.html'">
+            Jogo do Dinossauro
+        </button>
+    </div>
+</section>
+         
         <!-- Simplicidade: carregamos os scripts diretamente para permitir execução por onclick -->
         <script src="01javascript/sideQuests1/calculadoraDeImc.js"></script>
         <script src="01javascript/sideQuests1/conversorDeTemperatura.js"></script>
@@ -68,9 +85,16 @@
         <script src="01javascript/sideQuests2/diasNoMes.js"></script>
         <script src="01javascript/desafios/starUbers.js"></script>
         <script src="01javascript/desafios/emprestimo.js"></script>
-
+   
         <footer>
         <p>&copy; 2026 Desenvolvido por Gustavo Martins Castilhos | SENAI - Introdução ao JS</p>
     </footer>
+    </main>
+    <aside id="resultado">
+        <h3>Resultado</h3>
+        <p>Escolha uma Side Quest...</p>
+    </aside> 
+
+</div>
     </body>
 </html>

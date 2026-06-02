@@ -1,36 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 /* --- VARIÁVEIS (O segredo dos profissionais para organizar cores) --- */
-:root {
-  --bg-dark: #0d0d12;           /* Fundo principal bem escuro */
-  --card-bg: #1a1a24;           /* Fundo das caixas levemente mais claro */
-  --purple-main: #7a28cb;       /* Roxo principal */
-  --purple-light: #a29bfe;      /* Roxo claro para textos e hover */
-  --text-white: #f0f0f5;        /* Branco suave (não cansa a vista) */
-  --neon-shadow: 0 0 15px rgba(122, 40, 203, 0.4);
+:root{
+    --bg:#111827;
+    --surface:#1f2937;
+    --surface-hover:#273449;
+
+    --primary:#8b5cf6;
+
+    --text:#f9fafb;
+    --text-muted:#9ca3af;
+
+    --border:#374151;
+
+    --shadow:
+    0 10px 30px rgba(0,0,0,.25);
 }
 
 /* --- ESTRUTURA GERAL --- */
-body {
-  font-family: 'Poppins', Arial, sans-serif;
-  margin: 0 auto;
-  padding: 40px 2vw;
-  background-color: var(--bg-dark);
-  color: var(--text-white);
-  max-width: 1000px; /* Um pouco mais estreito para focar a leitura */
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+    max-width:1500px;
+    margin:auto;
+
+    padding:40px 24px 80px;
 }
 
 /* --- TIPOGRAFIA --- */
-h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  text-align: center;
-  /* Efeito de Gradiente no Texto */
-  background: linear-gradient(90deg, var(--purple-light), var(--purple-main));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 40px;
-  letter-spacing: -1px;
+
+.hero{
+    text-align:center;
+
+    padding:60px 40px;
+
+    margin-bottom:40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(139,92,246,.15),
+        rgba(139,92,246,.02)
+    );
+
+    border:1px solid rgba(139,92,246,.2);
+}
+.hero-tag{
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+.hero p{
+    max-width:700px;
+
+    margin:20px auto 0;
+
+    color:var(--text-muted);
+
+    font-size:1.1rem;
 }
 
 h2 {
@@ -41,33 +82,42 @@ h2 {
 }
 
 /* --- SEÇÕES & CARDS (Deixa o visual menos 'chapado') --- */
-details {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(122, 40, 203, 0.2);
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  overflow: hidden; 
-  transition: all 0.3s ease;
+details{
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+    transition:.25s;
 }
 
-details:hover {
-  border-color: var(--purple-main);
-  box-shadow: var(--neon-shadow);
+details:hover{
+    transform:translateY(-2px);
+
+    border-color:var(--primary);
+
+    box-shadow:var(--shadow);
 }
 
-summary {
-  list-style: none;
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 20px;
-  transition: all 0.3s ease;
+summary{
+    padding:24px;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    list-style:none;
 }
 
-summary::-webkit-details-marker { 
-  display: none; 
+summary::-webkit-details-marker{
+    display:none;
 }
 
 summary:hover {
@@ -84,24 +134,31 @@ summary:hover {
   padding: 20px;
 }
 
-button {
-  background-color: transparent;
-  color: var(--text-white);
-  padding: 12px 24px;
-  border: 2px solid var(--purple-main);
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+button{
+    background:#111827;
+
+    color:white;
+
+    border:1px solid #374151;
+
+    border-radius:10px;
+
+    padding:14px 20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
 }
 
 /* Hover: Botão acende e levanta um pouquinho */
-button:hover {
-  background-color: var(--purple-main);
-  color: white;
-  transform: translateY(-3px); 
-  box-shadow: var(--neon-shadow);
+button:hover{
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    transform:translateY(-2px);
 }
 
 button:active {
@@ -154,11 +211,14 @@ hr {
 }
 
 /* --- FOOTER --- */
-footer {
-  margin-top: 60px;
-  padding: 30px 0;
-  text-align: center;
-  border-top: 1px solid rgba(122, 40, 203, 0.2);
+footer{
+    margin-top:80px;
+
+    text-align:center;
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
 }
 
 footer p {
@@ -167,4 +227,88 @@ footer p {
   opacity: 0.6;
   letter-spacing: 2px;
   text-transform: uppercase; /* Dá um tom mais elegante */
+}
+.playground{
+    margin:60px 0;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(139,92,246,.15),
+        rgba(139,92,246,.03)
+    );
+
+    border:1px solid rgba(139,92,246,.4);
+
+    text-align:center;
+}
+.playground-header span{
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+}
+.playground-header h2{
+    margin:12px 0;
+
+    font-size:2rem;
+}
+.playground-header p{
+    color:var(--text-muted);
+
+    margin-bottom:30px;
+}
+
+#resultado{
+    width:320px;
+
+    position:sticky;
+    top:220px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:25px;
+
+    min-height:200px;
+
+    box-shadow:var(--shadow);
+}
+
+#resultado h3{
+    margin-top:0;
+    color:var(--primary);
+}
+.layout{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.conteudo{
+    flex:1;
+}
+@media (max-width: 900px){
+
+    .layout{
+        flex-direction:column;
+    }
+
+    #resultado{
+        width:auto;
+        position:static;
+    }
+
 }

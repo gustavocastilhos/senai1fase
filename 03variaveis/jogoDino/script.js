@@ -101,7 +101,7 @@ document.getElementById("btn-apostar").addEventListener("click", () => {
 // Desafio 1 e 1a: Painel Secreto
 document.getElementById("btn-secret").addEventListener("click", () => {
     const senha = prompt("Insira a senha mestra da Dona Bete:");
-    if (senha === "0171") {
+    if (senha === "6767") {
         alert(`--- RELATÓRIO DONA BETE ---\nCaixa Atual (Arrecadado): €${totalArrecadado.toFixed(2)}\nTotal Pago em Prémios: €${totalPremiosPagos.toFixed(2)}\nTeto Limite Máximo: €${limitePremiosGlobal.toFixed(2)}`);
     } else {
         alert("Senha errada! Mas parabéns... Ganhou uma RODADA GRÁTIS! 🎁 (Aproveite!)");
