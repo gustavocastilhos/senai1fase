@@ -16,14 +16,14 @@ function converterCelsiusParaFahrenheit(celsius) {
 }
 
 function mostrarResultado(temperaturaCelsius, temperaturaFahrenheit) {
-  let mensagemResultado = '\n=======================================\n';
+  let mensagemResultado = '\n================\n';
   mensagemResultado += `A temperatura em Fahrenheit é de: ${temperaturaFahrenheit.toFixed(2)}`;
   if (temperaturaFahrenheit > 68) {
     mensagemResultado += '\nEstá super calor!!';
   } else {
     mensagemResultado += '\nNão está muito quente.';
   }
-  mensagemResultado += '\n=======================================\n';
+  mensagemResultado += '\n=================\n';
       document.getElementById('resultado').innerHTML = `${mensagemResultado.replace(/\n/g, '<br>')}`;  
 }
 
