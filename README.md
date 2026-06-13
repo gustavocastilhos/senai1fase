@@ -21,6 +21,7 @@ Repositório com os programas, exercícios e aprendizados desenvolvidos durante 
 ├── 01javascript     # Códigos em JavaScript
 ├── 02css            # Códigos css
 ├── 03variaveis      # Codigos com variaveis
+├── assets      
 ├── index.html
 ├── LICENSE
 └── README.md
