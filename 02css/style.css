@@ -131,6 +131,7 @@ summary:hover {
 #sidequests-list, #sidequests2-list, #desafios-hard, #variaveis-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Adicione esta linha */
     gap: 15px;
     padding: 0 24px 24px 24px;
 }
