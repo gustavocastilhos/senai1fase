@@ -1,0 +1,53 @@
+/* Reset básico para limpar as margens padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do fundo da página e alinhamento central */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2d3748;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 2.2rem;
+    color: #1a202c;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Caixa onde a lista de dias vai aparecer */
+#listaDosDias {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    
+    /* O truque abaixo resolve o espaçamento dos <br> do seu JS */
+    line-height: 2.2; 
+    font-size: 1.1rem;
+    color: #4a5568;
+    border-left: 5px solid #3182ce; /* Barrinha azul de destaque na lateral */
+}
+
+/* Caixa de destaque para o total de tarefas */
+#totalDeTarefas {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    text-align: center;
+    border: 1px solid #bee3f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
