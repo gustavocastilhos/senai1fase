@@ -5,6 +5,7 @@ let diasDeSprint = Number(prompt("Quantos dias tem o sprint? "))
  let diaComMenosbugs = 1000000
 let queDiaMais = 0
 let queDiaMenos
+let textoRelatorio = "";
 for(let i = 1; i <= diasDeSprint; i++){
     let bugsEncontrados = Number(prompt("Quantos bugs foram encontrados? "))
 
@@ -18,14 +19,17 @@ for(let i = 1; i <= diasDeSprint; i++){
     }
 
     totalDeBugs += bugsEncontrados
-    let bugsPorDia = totalDeBugs / diasDeSprint
-    document.getElementById('listaDosBugs').innerHTML += "Dia " + i +  ": " + bugsEncontrados + " Bugs foram encontrados" + '<br>';
-    document.getElementById('totalDeBugs').innerHTML = 'Total de bugs encontrados: ' + totalDeBugs;
-    document.getElementById('BugsPorDia').innerHTML = 'Media de bugs por dia: ' + bugsPorDia;   
-    document.getElementById('DiaComMaisBugs').innerHTML = 'O dia com mais bugs foi o dia '+queDiaMais+" com um total de "+diaComMaisbugs+" bugs";   
-    document.getElementById('DiaComMenosBugs').innerHTML = 'O dia com menos bugs foi o dia '+queDiaMenos+" com um total de "+diaComMenosbugs+" bugs";   
-
-
+    textoRelatorio += "Dia " + i + ": " + bugsEncontrados + " Bugs foram encontrados\n";
+   
 
 }
+let bugsPorDia = totalDeBugs / diasDeSprint;
+
+    textoRelatorio += "\n----------------------------------------\n";
+    textoRelatorio += "Total de bugs encontrados: " + totalDeBugs + "\n";
+    textoRelatorio += "Média de bugs por dia: " + bugsPorDia.toFixed(1) + "\n"; // .toFixed(1) limita a 1 casa decimal
+    textoRelatorio += "O dia com mais bugs foi o dia " + queDiaMais + " com um total de " + diaComMaisbugs + " bugs\n";
+    textoRelatorio += "O dia com menos bugs foi o dia " + queDiaMenos + " com um total de " + diaComMenosbugs + " bugs\n";
+
+    document.getElementById('resultado').value = textoRelatorio;
 }

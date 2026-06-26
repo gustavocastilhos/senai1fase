@@ -1,84 +1,61 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Reseta as margens e define a fonte padrão */
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
+    margin: 0;
 }
 
+/* Estilo do título principal */
 h1 {
-    color: #1a202c;
+    color: #8A2BE2; /* Tom de roxo parecido com o do seu print de requisitos */
     margin-bottom: 20px;
-    font-size: 2.5rem;
 }
 
+/* Estilo do botão */
 button {
-    background-color: #e53e3e; 
+    background-color: #8A2BE2;
     color: white;
     border: none;
     padding: 12px 24px;
-    font-size: 1.1rem;
+    font-size: 16px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    transition: background-color 0.3s, transform 0.1s;
     margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(229, 62, 62, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Efeito ao passar o mouse e ao clicar no botão */
 button:hover {
-    background-color: #c53030;
+    background-color: #6A1CB0;
 }
-
 button:active {
     transform: scale(0.98);
 }
 
-#listaDosBugs, 
-#totalDeBugs, 
-#BugsPorDia, 
-#DiaComMaisBugs, 
-#DiaComMenosBugs {
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 500px;
-    padding: 15px 20px;
-    margin-bottom: 12px;
+/* Estilo do textarea */
+textarea {
+    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada fica melhor para relatórios */
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 15px;
+    border: 2px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    resize: none; /* Impede que o usuário redimensione a caixa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
 }
 
-#listaDosBugs {
-    line-height: 1.6;
-    border-left: 5px solid #3182ce; 
-    font-size: 1.1rem;
+/* Quando o textarea estiver focado */
+textarea:focus {
+    outline: none;
+    border-color: #8A2BE2;
 }
-
-#totalDeBugs {
-    font-size: 1.3rem;
-    border-left: 5px solid #dd6b20; 
-}
-
-#BugsPorDia {
-    font-size: 1.1rem;
-    border-left: 5px solid #805ad5; 
-}
-
-#DiaComMaisBugs {
-    font-size: 1.1rem;
-    border-left: 5px solid #e53e3e; 
-}
-
-#DiaComMenosBugs {
-    font-size: 1.1rem;
-    border-left: 5px solid #38a169; 
-}
-
