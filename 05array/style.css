@@ -1,0 +1,21 @@
+/* Muda a fonte da página inteira e dá um espaço nas bordas da tela */
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f9f9f9;
+}
+
+/* Deixa os botões um pouco maiores e mais fáceis de clicar */
+button {
+    padding: 8px 12px;
+    margin: 5px 2px;
+    cursor: pointer; /* Faz aparecer a mãozinha ao passar o mouse */
+}
+
+/* Dá um destaque para cada produto que aparecer na lista */
+#listaProdutos p {
+    background-color: #ffffff;
+    padding: 8px;
+    margin: 5px 0;
+    border-left: 3px solid #333; /* Uma barrinha preta charmosa na esquerda */
+}
