@@ -1,21 +1,53 @@
-/* Muda a fonte da página inteira e dá um espaço nas bordas da tela */
+/* Configurações Gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px auto;
+    max-width: 600px; /* Centraliza a página e não deixa espalhar em telas grandes */
+    padding: 0 20px;
+    background-color: #f4f6f8;
+    color: #333;
 }
 
-/* Deixa os botões um pouco maiores e mais fáceis de clicar */
+/* Títulos e Linhas */
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #dcdde1;
+    margin: 20px 0;
+}
+
+/* Botões */
 button {
-    padding: 8px 12px;
-    margin: 5px 2px;
-    cursor: pointer; /* Faz aparecer a mãozinha ao passar o mouse */
+    background-color: #3498db; /* Azul bonito */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 4px;
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s; /* Efeito suave ao passar o mouse */
 }
 
-/* Dá um destaque para cada produto que aparecer na lista */
+/* Efeito ao passar o mouse nos botões */
+button:hover {
+    background-color: #2980b9; /* Azul um pouco mais escuro */
+}
+
+/* Lista de Produtos */
+#listaProdutos {
+    margin-top: 20px;
+}
+
 #listaProdutos p {
     background-color: #ffffff;
-    padding: 8px;
-    margin: 5px 0;
-    border-left: 3px solid #333; /* Uma barrinha preta charmosa na esquerda */
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border-left: 4px solid #2ecc71; /* Barrinha verde de sucesso na esquerda */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra bem de leve ao redor */
 }
