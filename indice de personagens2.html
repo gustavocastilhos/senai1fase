@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://ava.sesisenai.org.br/pluginfile.php/2111805/mod_resource/content/1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+    <div class="card">
+        <h1>Buscar Indices</h1>
+        <div class="array-container" id="lista"><div class="celula destaque" id="item - 0"><span class="valor">Rivaldo</span><span class="idx">[0]</span></div><div class="celula" id="item - 1"><span class="valor">Kowalski</span><span class="idx">[1]</span></div><div class="celula" id="item - 2"><span class="valor">qualquer nome</span><span class="idx">[2]</span></div><div class="celula" id="item - 3"><span class="valor">waltdisney</span><span class="idx">[3]</span></div></div>
+        <select id="seletor"><option value="Rivaldo">Rivaldo</option><option value="Kowalski">Kowalski</option><option value="qualquer nome">qualquer nome</option><option value="waltdisney">waltdisney</option></select>
+        <button onclick="buscarIndice()">Buscar Indice</button>
+        <div id="resultado">"Rivaldo" está no indice 0</div>
+    </div>
+
+<script>
+ const personagens = [
+    "Rivaldo",
+    "Kowalski",
+    "qualquer nome",
+    "waltdisney"
+ ];
+ 
+ const lista = document.getElementById("lista");
+ const seletor = document.getElementById("seletor");
+
+ for(let i = 0;i<personagens.length;i++) {
+ 
+ const nome = personagens[i];
+ const celula = document.createElement("div");
+ celula.className = "celula";
+ celula.id = "item - " +i;
+ celula.innerHTML=`<span class="valor">${nome}</span><span class="idx">[${i}]</span>`;
+ lista.appendChild(celula);
+
+ const opt = document.createElement("option");
+ opt.value = nome;
+ opt.textContent = nome;
+ seletor.appendChild(opt);
+}
+
+function buscarIndice(){
+    const celulas = document.querySelectorAll(".celula");
+    for(let i=0;i<celulas.length;i++){
+        celulas[i].classList.remove("destaque");
+    }
+    const nomeEscolhido = seletor.value;
+
+    let indice = -1;
+    let i = 0;
+    while (i < personagens.length){
+        if(personagens[i] === nomeEscolhido){
+        indice = i;
+        break;
+    }i++;
+}
+
+document.getElementById("resultado").textContent = `"${nomeEscolhido}" está no indice ${indice}`;
+document.getElementById("item - " + indice).classList.add("destaque");
+}
+
+</script>    
+</body></html>
