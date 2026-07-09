@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações com Array de Pessoas</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <span id="array-display">Array Atual: </span>
+        </div>
+
+        <div class="box">
+            <span>1. Verificar se "Kowalski" está presente</span>
+            <button onclick="verificarKowalski()">Executar</button>
+        </div>
+
+        <div class="box">
+            <span>2. Descobrir índice de "Padre Ernan Buco"</span>
+            <button onclick="descobrirIndice()">Executar</button>
+        </div>
+
+        <div class="box">
+            <span>3. Remover "GENéZio" com splice()</span>
+            <button onclick="removerGenezio()">Executar</button>
+        </div>
+
+        <div class="box">
+            <span>4. Inverter o array</span>
+            <button onclick="inverterArray()">Executar</button>
+        </div>
+          
+        <div class="box" id="resultado">
+            <span>Resultado da execução: </span>
+        </div>
+    </div>
+    <script>
+        // Array inicial baseado nos dados inferidos da imagem
+        let pessoas = ["Gill Bates", "Kowalski", "GENéZio", "Padre Ernan Buco", "Heitor Tuga"];
+
+        // Função para atualizar a visualização do array na tela
+        function atualizarDisplay() {
+            document.getElementById("array-display").innerText = `Array Atual: [${pessoas.join(", ")}]`;
+        }
+
+        // Função para exibir o resultado da operação
+        function mostrarResultado(texto) {
+            document.getElementById("resultado").innerHTML = `<span>Resultado da execução: ${texto}</span>`;
+            atualizarDisplay();
+        }
+
+        // 1. includes()
+        function verificarKowalski() {
+            let presente = pessoas.includes("Kowalski");
+            mostrarResultado(`includes() -> "Kowalski" está presente? ${presente}`);
+        }
+
+        // 2. indexOf()
+        function descobrirIndice() {
+            let indice = pessoas.indexOf("Padre Ernan Buco");
+            mostrarResultado(`indexOf() -> O índice de "Padre Ernan Buco" é ${indice}`);
+        }
+
+        // 3. splice()
+        function removerGenezio() {
+            let indice = pessoas.indexOf("GENéZio");
+            if (indice !== -1) {
+                // Remove 1 elemento a partir do índice encontrado
+                pessoas.splice(indice, 1); 
+                mostrarResultado(`splice() -> "GENéZio" foi removido.`);
+            } else {
+                mostrarResultado(`splice() -> "GENéZio" não foi encontrado no array.`);
+            }
+        }
+
+        // 4. reverse()
+        function inverterArray() {
+            pessoas.reverse();
+            mostrarResultado(`reverse() -> [${pessoas.join(", ")}]`);
+        }
+
+        // Inicializa a tela mostrando o array original
+        atualizarDisplay();
+    </script>
+</body>
+</html>
