@@ -31,16 +31,18 @@
             <span>4. Inverter o array</span>
             <button onclick="inverterArray()">Executar</button>
         </div>
-          
+
+        <!--caixa de resultado-->
         <div class="box" id="resultado">
             <span>Resultado da execução: </span>
         </div>
     </div>
+
     <script>
-        // Array inicial baseado nos dados inferidos da imagem
+        //array bb
         let pessoas = ["Gill Bates", "Kowalski", "GENéZio", "Padre Ernan Buco", "Heitor Tuga"];
 
-        // Função para atualizar a visualização do array na tela
+        //função para atualizar a visualização do array na tela
         function atualizarDisplay() {
             document.getElementById("array-display").innerText = `Array Atual: [${pessoas.join(", ")}]`;
         }
@@ -51,19 +53,19 @@
             atualizarDisplay();
         }
 
-        // 1. includes()
+        // 1 includes
         function verificarKowalski() {
             let presente = pessoas.includes("Kowalski");
             mostrarResultado(`includes() -> "Kowalski" está presente? ${presente}`);
         }
 
-        // 2. indexOf()
+        // 2 indexOf
         function descobrirIndice() {
             let indice = pessoas.indexOf("Padre Ernan Buco");
             mostrarResultado(`indexOf() -> O índice de "Padre Ernan Buco" é ${indice}`);
         }
 
-        // 3. splice()
+        // 3 splice
         function removerGenezio() {
             let indice = pessoas.indexOf("GENéZio");
             if (indice !== -1) {
@@ -75,13 +77,13 @@
             }
         }
 
-        // 4. reverse()
+        // 4 reverse
         function inverterArray() {
             pessoas.reverse();
             mostrarResultado(`reverse() -> [${pessoas.join(", ")}]`);
         }
 
-        // Inicializa a tela mostrando o array original
+        // tela mostrando o array original
         atualizarDisplay();
     </script>
 </body>
