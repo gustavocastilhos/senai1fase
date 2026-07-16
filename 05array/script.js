@@ -11,6 +11,7 @@ let precos = [665.9999, 777, 12, 4];
 
 
 function verProdutosComPrecos(){
+    
     // Limpa a div antes de mostrar a lista atualizada
     document.getElementById('listaProdutos').innerHTML = ""; 
     
@@ -71,3 +72,97 @@ function adicionarProduto() {
         alert("Operação cancelada ou dados inválidos!");
     }
 }
+
+function finalArray() {
+
+const personagens = ["Lúcio Fernando", "Mônica", "Capitão Ganso"];
+ 
+personagens.push("Gill Bates")
+console.log(personagens)
+
+}
+//finalArray()
+function inicioArray (){
+const personagens = ["Lúcio Fernando", "Mônica", "Capitão Ganso"];
+
+personagens.unshift("Dona Bete")
+console.log(personagens);
+
+}
+//inicioArray()
+function revmUltimo(){
+const personagens = [
+    "Lúcio Fernando",
+    "Mônica",
+    "Capitão Ganso",
+    "Gill Bates"
+];
+
+personagens.pop()
+console.log(personagens);
+
+}
+//revmUltimo()
+function remPrimeiro(){
+    const personagens = [
+    "Lúcio Fernando",
+    "Mônica",
+    "Capitão Ganso",
+    "Gill Bates"
+];
+
+personagens.shift()
+console.log(personagens);
+
+}
+//remPrimeiro()
+function remUm(){
+const personagens = [
+    "Lúcio Fernando",
+    "Mônica",
+    "Capitão Ganso",
+    "Gill Bates",
+    "Junin"
+];
+
+personagens.splice(2,1)
+console.log(personagens);
+
+}
+//remUm()
+function remDois(){
+const personagens = [
+    "Lúcio Fernando",
+    "Mônica",
+    "Capitão Ganso",
+    "Gill Bates",
+    "Junin"
+];
+
+personagens.splice(3,2)
+console.log(personagens);
+
+}
+//remDois()
+function addFinal(){
+const personagens = [
+    "Peba",
+    "Bilu",
+    "Waldisney"
+];
+personagens.push("Padre Ernan Buco")
+console.log(personagens)
+
+}
+//addFinal()
+function addInicio(){
+const personagens = [
+    "Peba",
+    "Bilu",
+    "Waldisney"
+];
+personagens.unshift("GENéZio" , "Kowalski")
+console.log(personagens);
+
+}
+addInicio()
