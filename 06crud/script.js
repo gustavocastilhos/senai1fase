@@ -1,7 +1,5 @@
 let dinos = []
 
-
-
 function cadastrarDino(){
     const novoDino = {
         id: Date.now(),
@@ -14,7 +12,6 @@ function cadastrarDino(){
     console.log(dinos)
     limparFormulario()
 }
-
 function limparFormulario(){
         document.getElementById("input-nome").value = ""
         document.getElementById("input-altura").value = ""
@@ -24,20 +21,15 @@ function limparFormulario(){
         document.getElementById("input-nome").focus()
 
 }
-
-
-
-
-
-
-
-function dino(){
-    let novoDino = {
-    nome: "Velocirraptor",
-    altura: 3,
-    cor: "marrom bombom",
-    custo: 24,
+function mostrarTodos(){
+    
 
 }
+function testar(){
+  dinos = [
+
+
+
+  ]
 
 }
