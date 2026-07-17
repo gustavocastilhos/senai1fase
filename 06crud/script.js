@@ -22,11 +22,19 @@ function limparFormulario(){
 
 }
 function mostrarTodos(){
-    
+    document.getElementById("painel-dinos").innerHTML = ""
+
     for(let i=0; i<dinos.length; i++){
         // alert(dinos[i].nome)
         document.getElementById('painel-dinos').innerHTML += 
-        `<p class="card-dino">${dinos[i].nome}</p>`
+        `<div class="card-dino">
+        <h2>${dinos[i].nome}</h2>
+        <p>Altura:${dinos[i].altura}</p>
+        <p>Cor:${dinos[i].cor}</p>
+        <p>Custo:${dinos[i].custo}</p>
+        <p>id:${dinos[i].id}</p>
+
+        </div>` 
         
     }
 
