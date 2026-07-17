@@ -4,13 +4,14 @@ function cadastrarDino(){
     const novoDino = {
         id: Date.now(),
         nome: document.getElementById("input-nome").value,
-        altura: Number(document.getElementById("input-altura").value),
+        altura: Number(document.getElementById("input-altura").value) || "Não identificada",
         cor: document.getElementById("input-cor").value,
-        custo: Number(document.getElementById("input-custo").value),
+        custo: Number(document.getElementById("input-custo").value) || "Incalculável",
     }
     dinos.push(novoDino)
     console.log(dinos)
     limparFormulario()
+    mostrarTodos()
 }
 function limparFormulario(){
         document.getElementById("input-nome").value = ""
