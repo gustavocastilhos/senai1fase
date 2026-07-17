@@ -223,7 +223,6 @@ console.log(personagens);
 }
 //addInicioEFinal()
 function remUltEPrimeiro(){
-
 const personagens = [
     "Rivaldo Jesus",
     "Kowalski",
@@ -235,4 +234,8 @@ const personagens = [
     personagens.shift()
 console.log(personagens)
 }
-remUltEPrimeiro()
+//remUltEPrimeiro()
+function descobrirIndice(){
+    
+
+}
