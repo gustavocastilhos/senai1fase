@@ -165,4 +165,74 @@ personagens.unshift("GENéZio" , "Kowalski")
 console.log(personagens);
 
 }
-addInicio()
+//addInicio()
+function acharIndice(){
+    const personagens = [
+    "Peba",
+    "Bilu",
+    "Waldisney",
+    "GENéZio"
+];
+
+console.log(personagens.indexOf("Waldisney"));
+
+}
+//acharIndice()
+function vereficaExistencia(){
+    const personagens = [
+    "Peba",
+    "Bilu",
+    "Waldisney",
+    "GENéZio"
+];
+console.log(personagens.includes("Heitor Tuga"))
+
+}
+//vereficaExistencia()
+function inverteArray(){
+const personagens = [
+    "Lúcio Fernando",
+    "Mônica",
+    "Capitão Ganso",
+    "Gill Bates"
+];
+personagens.reverse()
+console.log(personagens);
+
+}
+//inverteArray()
+function remJunin(){
+const personagens = [
+    "Tião",
+    "Junin",
+    "Padre Ernan Buco"
+];
+personagens.splice(1,1)
+console.log(personagens);
+}
+//remJunin()
+function addInicioEFinal(){
+    const personagens = [
+    "Tião",
+    "Junin",
+    "Padre Ernan Buco"
+];
+personagens.push("Dona Bete");
+personagens.unshift("Mônica");
+console.log(personagens);
+}
+//addInicioEFinal()
+function remUltEPrimeiro(){
+
+const personagens = [
+    "Rivaldo Jesus",
+    "Kowalski",
+    "GENéZio",
+    "Waldisney"
+];
+
+    personagens.pop()
+    personagens.shift()
+console.log(personagens)
+}
+remUltEPrimeiro()
