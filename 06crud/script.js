@@ -85,7 +85,7 @@ function testar(){
 }
 function pesquisar(){
 let nomeProcurado = document.getElementById("input-nome").value;
- for( i = 0; i <= dinos.length; i++){
+ for( i = 0; i < dinos.length; i++){
 if(nomeProcurado == dinos[i].nome){
 document.getElementById("input-altura").value = dinos[i].altura
 document.getElementById("input-cor").value = dinos[i].cor
@@ -100,7 +100,7 @@ console.log([i])
 function salvarDino(){
     let id = Number(document.getElementById(`input-id`).value)
 
- for( i = 0; i <= dinos.length; i++){
+ for( i = 0; i < dinos.length; i++){
     if( id == dinos[i].id){
      dinos[i].altura = document.getElementById("input-altura").value 
      dinos[i].cor = document.getElementById("input-cor").value 
@@ -115,10 +115,10 @@ limparFormulario()
 function excluir(){
     let id = Number(document.getElementById(`input-id`).value)
 
- for( i = 0; i <= dinos.length; i++){
+ for( i = 0; i < dinos.length; i++){
     if( id == dinos[i].id){
    
-        dinos.splice(i,1);
+    dinos.splice(i,1);
 
     console.log([i])
     }
