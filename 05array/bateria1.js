@@ -236,6 +236,121 @@ console.log(personagens)
 }
 //remUltEPrimeiro()
 function descobrirIndice(){
-    
+    const personagens = [
+    "Rivaldo Jesus",
+    "Kowalski",
+    "GENéZio",
+    "Waldisney"
+];
+
+console.log(personagens.indexOf("GENéZio"))
+
 
 }
+//descobrirIndice()
+function descobrirSeExiste(){
+    const personagens = [
+    "Rivaldo Jesus",
+    "Kowalski",
+    "GENéZio",
+    "Waldisney"
+];
+console.log(personagens.includes("Capitão Ganso"))
+
+}
+//descobrirSeExiste()
+function remvDoisPrimeiros(){
+const personagens = [
+    "Bilu",
+    "Mônica",
+    "Gill Bates",
+    "Junin",
+    "Peba"
+];
+personagens.splice(0,2)
+console.log(personagens);
+}
+//remvDoisPrimeiros()
+function remvTresUltimos(){
+    const personagens = [
+    "Bilu",
+    "Mônica",
+    "Gill Bates",
+    "Junin",
+    "Peba"
+];
+personagens.splice(2,3)
+console.log(personagens);
+
+
+}
+//remvTresUltimos()
+function  addInicioEFinal2(){
+    const personagens = [
+    "Capitão Ganso",
+    "Heitor Tuga",
+    "Dona Bete"
+];
+
+personagens.push("Lúcio Fernando");
+personagens.unshift("Gill Bates");
+console.log(personagens);
+}
+//addInicioEFinal2()
+function inverte(){
+    const personagens = [
+    "Padre Ernan Buco",
+    "GENéZio",
+    "Bilu",
+    "Junin"
+];
+personagens.reverse()
+console.log(personagens)
+
+
+}
+//inverte()
+function remvDois(){
+    const personagens = [
+    "Lúcio Fernando",
+    "Rivaldo Jesus",
+    "Mônica",
+    "Capitão Ganso",
+    "Gill Bates",
+    "Junin"
+];
+
+personagens.splice(2,2)
+console.log(personagens)
+
+}
+//remvDois()
+function fazTudo(){
+    const personagens = [
+    "Tião",
+    "Peba",
+    "Waldisney"
+];
+
+personagens.push("Bilu")
+personagens.unshift("Dona Bete")
+personagens.pop()
+personagens.reverse()
+console.log(personagens)
+}
+//fazTudo()
+function fazTudo2(){
+    const personagens = [
+    "Gill Bates",
+    "Kowalski",
+    "GENéZio",
+    "Padre Ernan Buco",
+    "Heitor Tuga"
+];
+console.log(personagens.includes("Kowalski"))
+console.log(personagens.indexOf("Padre Ernan Buco"))
+personagens.splice(2,1)
+personagens.reverse()
+console.log(personagens)
+}
+//fazTudo2()
