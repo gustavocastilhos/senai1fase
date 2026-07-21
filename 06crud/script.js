@@ -2,13 +2,12 @@ let dinos = []
 function salvarDados (){
 
     localStorage.setItem("dinos", JSON.stringify(dinos))
-    let testeDeLeitura =  localStorage.getItem("Teste")
-    console.log(testeDeLeitura)
+    //let testeDeLeitura =  localStorage.getItem("Teste")
+    //console.log(testeDeLeitura)
 
 }
 function carregarDados(){
-
-    
+    dinos =  JSON.parse(localStorage.getItem("dinos"))
 }
 
 function cadastrarDino(){
