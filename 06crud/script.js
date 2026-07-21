@@ -1,4 +1,15 @@
 let dinos = []
+function salvarDados (){
+
+    localStorage.setItem("dinos", JSON.stringify(dinos))
+    let testeDeLeitura =  localStorage.getItem("Teste")
+    console.log(testeDeLeitura)
+
+}
+function carregarDados(){
+
+    
+}
 
 function cadastrarDino(){
     const novoDino = {
@@ -43,7 +54,8 @@ function mostrarTodos(){
 
 }
 function testar(){
-   dinos = [
+
+    dinos = [
         {
             id: 1718324500001,
             nome: "Rex",
