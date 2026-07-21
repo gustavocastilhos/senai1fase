@@ -11,7 +11,9 @@ function carregarDados(){
 }
 
 function cadastrarDino(){
-    const novoDino = {
+   
+    carregarDados()
+    const novoDino = {  
         id: Date.now(),
         nome: document.getElementById("input-nome").value,
         altura: Number(document.getElementById("input-altura").value) || "Não identificada.",
@@ -22,6 +24,7 @@ function cadastrarDino(){
     console.log(dinos)
     limparFormulario()
     mostrarTodos()
+    salvarDados()
 }
 function limparFormulario(){
         document.getElementById("input-nome").value = ""
