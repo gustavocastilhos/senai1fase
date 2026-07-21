@@ -34,3 +34,40 @@ console.log(pessoas)
 
 }
 //addErmv()
+function rmvEverifica (){
+        const empresas = [
+  "Telles Transportes",
+  "Rede Eco",
+  "Pousada Ada",
+  "Resort Orth",
+  "Bergamota",
+  "Amazonia",
+  "Coxão do Santinho",
+  "Casa de Pastel",
+  "Rango Star",
+  "Alibebe",
+  "Ed Som",
+  "Gê Estantes"
+];
+empresas.splice(5,1)
+console.log(empresas);
+console.log(empresas.includes("Amazonia"));
+
+
+}
+//rmvEverifica()
+function invrtEProcura (){
+    const pessoas = [
+  "Márcia",
+  "Mano Juca",
+  "Lúcio Fernando",
+  "Roque",
+  "Yasmina",
+  "Waldisney",
+  "Lady Murphy"
+];
+pessoas.reverse()
+console.log(pessoas.indexOf("Roque"));
+
+}
+//invrtEProcura()
