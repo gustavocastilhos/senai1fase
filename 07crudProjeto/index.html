@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
 </head>
 <body>
-    
+    <h1>CRUD</h1>
+    <div id="form">
+    <div class="container-inputs">
+        <label for="">nome</label>
+            <input id="input-nome" type="text">
+        </div>
+    <div class="container-inputs">
+        <label for="">altura</label>
+            <input id="input-altura" type="text">
+        </div>
+    <div class="container-inputs">
+        <label for="">cor</label>
+            <input id="input-cor" type="text">
+        </div>
+    <div class="container-inputs">
+        <label for="">custo</label>
+            <input id="input-custo" type="text">
+        </div>
+          <div class="container-inputs">
+        <label for="">id</label>
+            <input id="input-id" type="number">
+        </div>
+            <button onclick="cadastrarDino()">Cadastrar Dino</button>
+            <button onclick="salvarDino()">💾</button>
+            <button onclick="excluir()">🗑️</button>
+
+    </div>
+     
+    <div id="painel-botaoes"> 
+    <button onclick="testar()">Teste</button>
+    <button onclick="mostrarTodos()">mostrar Todos</button>
+    <button onclick="pesquisar()">🔎</button>
+</div>
+  
+
+     <div id="painel-dinos">
+        tem nada dentro
+    </div>
+<script src="script.js"></script>
 </body>
 </html>

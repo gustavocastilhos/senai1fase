@@ -1,0 +1,82 @@
+:root {
+  /* ==========================================
+     1. PALETA TEMÁTICA (A Estética Jurássica)
+     ========================================== */
+  --dino-basalto:      #1E2320; /* Preto esverdeado, rocha vulcânica */
+  --dino-verde-floresta:#2C4A3E; /* Verde profundo, vegetação conífera */
+  --dino-verde-musgo:  #4A6B5B; /* Verde médio para elementos secundários */
+  --dino-terra-cota:   #9C6B49; /* Marrom argila, solo de escavação */
+  --dino-ambar:        #D97706; /* Âmbar fossilizado (cor de alto contraste) */
+  --dino-osso:         #F5F3EC; /* Branco marfim, tom de osso fóssil */
+  --dino-areia:        #E6E2D6; /* Cinza quente para bordas e divisórias */
+
+  /* ==========================================
+     2. APLICAÇÃO FUNCIONAL (O Layout)
+     ========================================== */
+  /* Fundos e Superfícies */
+  --bg-principal:      var(--dino-osso);
+  --bg-card:           #FFFFFF;
+  --bg-destaque:       #EFECE1;
+  
+  /* Tipografia */
+  --texto-primario:    var(--dino-basalto);
+  --texto-secundario:  #5A635D;
+  --texto-claro:       #FFFFFF;
+
+  /* Cores de Marca e Ação (UI) */
+  --cor-primaria:      var(--dino-verde-floresta);
+  --cor-primaria-hover:#1F362D;
+  --cor-secundaria:    var(--dino-terra-cota);
+  
+  /* Call to Action (Botões de Compra/Destaque) */
+  --cta-fundo:         var(--dino-ambar);
+  --cta-fundo-hover:   #B86204;
+  --cta-texto:         #FFFFFF;
+
+  /* Estrutura */
+  --borda-padrao:      var(--dino-areia);
+  --sombra-card:       0 4px 12px rgba(30, 35, 32, 0.08);
+}
+body{
+background-color: var(--bg-principal);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.card-dino{
+background-color: rgb(205, 255, 255);
+width: 300px;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0 0 10px #000;
+
+}
+#painel-dinos{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 25px;
+flex-wrap: wrap; 
+}
+#form{
+background-color: chocolate;
+width: 40%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+padding: 15px;
+border-radius: 7px;
+}
+
+.container-inputs{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
