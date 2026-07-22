@@ -7,7 +7,7 @@ function salvarDados (){
 
 }
 function carregarDados(){
-    dinos =  JSON.parse(localStorage.getItem("dinos"))
+    dinos =  JSON.parse(localStorage.getItem("dinos")) || {}
 }
 
 function cadastrarDino(){
